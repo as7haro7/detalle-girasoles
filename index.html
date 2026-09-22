@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Girasoles para Brenda</title>
+  <meta name="description" content="Un pequeño detalle con girasoles para Brenda">
+  <meta name="theme-color" content="#130820">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Cg%20fill%3D%22%23f7c62f%22%3E%3Cellipse%20cx%3D%2232%22%20cy%3D%2210%22%20rx%3D%227%22%20ry%3D%2214%22%2F%3E%3Cellipse%20cx%3D%2232%22%20cy%3D%2254%22%20rx%3D%227%22%20ry%3D%2214%22%2F%3E%3Cellipse%20cx%3D%2210%22%20cy%3D%2232%22%20rx%3D%2214%22%20ry%3D%227%22%2F%3E%3Cellipse%20cx%3D%2254%22%20cy%3D%2232%22%20rx%3D%2214%22%20ry%3D%227%22%2F%3E%3Cellipse%20cx%3D%2216.5%22%20cy%3D%2216.5%22%20rx%3D%227%22%20ry%3D%2214%22%20transform%3D%22rotate%28-45%2016.5%2016.5%29%22%2F%3E%3Cellipse%20cx%3D%2247.5%22%20cy%3D%2247.5%22%20rx%3D%227%22%20ry%3D%2214%22%20transform%3D%22rotate%28-45%2047.5%2047.5%29%22%2F%3E%3Cellipse%20cx%3D%2247.5%22%20cy%3D%2216.5%22%20rx%3D%227%22%20ry%3D%2214%22%20transform%3D%22rotate%2845%2047.5%2016.5%29%22%2F%3E%3Cellipse%20cx%3D%2216.5%22%20cy%3D%2247.5%22%20rx%3D%227%22%20ry%3D%2214%22%20transform%3D%22rotate%2845%2016.5%2047.5%29%22%2F%3E%3C%2Fg%3E%3Ccircle%20cx%3D%2232%22%20cy%3D%2232%22%20r%3D%2213%22%20fill%3D%22%234a2508%22%2F%3E%3Ccircle%20cx%3D%2232%22%20cy%3D%2232%22%20r%3D%229%22%20fill%3D%22%232d1605%22%2F%3E%3C%2Fsvg%3E" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Dancing+Script:wght@700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-top: #221233;
+      --bg-mid: #160d24;
+      --bg-bottom: #0b0611;
+      --gold: #f7cd58;
+      --gold-soft: #fff1c4;
+      --glass: rgba(27, 16, 41, 0.28);
+      --glass-border: rgba(255,255,255,0.10);
+      --paper-dark: #181416;
+      --paper-brown: #4a332a;
+      --paper-gold: #d8ad55;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { min-height: 100%; }
+
+    body {
+      width: 100%;
+      min-height: 100svh;
+      min-height: 100dvh;
+      overflow: hidden;
+      overscroll-behavior: none;
+      touch-action: manipulation;
+      background:
+        radial-gradient(circle at 50% 14%, rgba(255, 210, 65, 0.08) 0%, transparent 18%),
+        radial-gradient(circle at 12% 24%, rgba(180, 92, 255, 0.08) 0%, transparent 24%),
+        radial-gradient(circle at 88% 30%, rgba(255, 149, 45, 0.06) 0%, transparent 22%),
+        linear-gradient(180deg, #25103d 0%, var(--bg-mid) 50%, var(--bg-bottom) 100%);
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      user-select: none;
+      isolation: isolate;
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      inset: -24%;
+      pointer-events: none;
+      z-index: 0;
+      background:
+        radial-gradient(circle at 28% 30%, rgba(255, 205, 70, 0.09) 0%, transparent 20%),
+        radial-gradient(circle at 72% 35%, rgba(165, 87, 255, 0.08) 0%, transparent 23%),
+        radial-gradient(circle at 50% 68%, rgba(255, 134, 35, 0.06) 0%, transparent 22%);
+      filter: blur(18px);
+      animation: auroraDrift 16s ease-in-out infinite alternate;
+    }
+
+    body::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background:
+        linear-gradient(115deg, transparent 18%, rgba(255,255,255,0.010) 42%, transparent 62%),
+        radial-gradient(ellipse at center, transparent 45%, rgba(5, 1, 10, 0.44) 100%);
+      animation: backgroundShimmer 12s ease-in-out infinite alternate;
+    }
+
+
+    body.theme-day {
+      background:
+        radial-gradient(circle at 50% 12%, rgba(255, 224, 141, 0.28) 0%, transparent 18%),
+        radial-gradient(circle at 15% 18%, rgba(255, 202, 110, 0.16) 0%, transparent 24%),
+        radial-gradient(circle at 85% 24%, rgba(255, 186, 110, 0.12) 0%, transparent 22%),
+        linear-gradient(180deg, #f7e8ff 0%, #ecd8f8 28%, #d8ecff 62%, #eef7ff 100%);
+      color: #4a3551;
+    }
+
+    body.theme-day::before {
+      background:
+        radial-gradient(circle at 25% 26%, rgba(255, 210, 90, 0.18) 0%, transparent 22%),
+        radial-gradient(circle at 75% 30%, rgba(255, 170, 90, 0.12) 0%, transparent 22%),
+        radial-gradient(circle at 50% 70%, rgba(255, 255, 255, 0.14) 0%, transparent 24%);
+      filter: blur(14px);
+      opacity: 0.85;
+    }
+
+    body.theme-day::after {
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.16) 0%, rgba(255,255,255,0.05) 32%, transparent 100%),
+        radial-gradient(ellipse at center, transparent 58%, rgba(140, 108, 180, 0.08) 100%);
+    }
+
+    body.theme-day .header {
+      background: rgba(255,255,255,0.16);
+      border-color: rgba(126, 88, 150, 0.14);
+      box-shadow: 0 8px 22px rgba(120, 88, 140, 0.08);
+    }
+
+    body.theme-day .header h1 {
+      color: #d3981d;
+      text-shadow: 0 0 9px rgba(255, 238, 196, 0.28);
+    }
+
+    body.theme-day .header p {
+      color: #6c4f3b;
+      text-shadow: none;
+    }
+
+    body.theme-day .stars-container,
+    body.theme-day .fireflies-layer {
+      opacity: 0.18;
+    }
+
+    body.theme-day .ambient-glow .bokeh {
+      opacity: 0.11;
+    }
+
+    .theme-toggle {
+      position: fixed;
+      top: max(12px, env(safe-area-inset-top));
+      right: max(12px, env(safe-area-inset-right));
+      z-index: 60;
+      width: 50px;
+      height: 50px;
+      border: 1px solid rgba(255,255,255,0.18);
+      background: linear-gradient(180deg, rgba(39, 26, 60, 0.94) 0%, rgba(19, 12, 30, 0.92) 100%);
+      color: var(--gold-soft);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      cursor: pointer;
+      box-shadow: 0 10px 26px rgba(0,0,0,0.20), inset 0 1px 0 rgba(255,255,255,0.08);
+      transition: transform .28s ease, background .45s ease, color .35s ease, box-shadow .45s ease, border-color .35s ease;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .theme-toggle::before {
+      content: '';
+      position: absolute;
+      inset: 4px;
+      border-radius: inherit;
+      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.12), transparent 58%);
+      opacity: 0.9;
+      z-index: 0;
+      transition: opacity .35s ease, background .45s ease;
+    }
+
+    .theme-toggle::after {
+      content: '';
+      position: absolute;
+      width: 70%;
+      height: 70%;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.04);
+      z-index: 0;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.05);
+    }
+
+    .theme-toggle:hover,
+    .theme-toggle:active {
+      transform: translateY(-1px) scale(1.04);
+    }
+
+    .theme-toggle .icon-sun,
+    .theme-toggle .icon-moon {
+      position: absolute;
+      inset: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.55rem;
+      line-height: 1;
+      z-index: 1;
+      transition: opacity .35s ease, transform .45s cubic-bezier(0.22, 1, 0.36, 1), filter .35s ease;
+      will-change: transform, opacity;
+    }
+
+    .theme-toggle .icon-sun {
+      color: #ffcf43;
+      text-shadow: 0 0 14px rgba(255, 210, 89, 0.48);
+      opacity: 0;
+      transform: scale(0.58) rotate(-90deg);
+    }
+
+    .theme-toggle .icon-moon {
+      color: #f6db7a;
+      text-shadow: 0 0 12px rgba(255, 224, 127, 0.32);
+      opacity: 0;
+      transform: scale(0.58) rotate(90deg);
+    }
+
+    body.theme-day .theme-toggle {
+      background: linear-gradient(180deg, rgba(255,255,255,0.90) 0%, rgba(238, 246, 255, 0.84) 100%);
+      color: #9a6700;
+      border-color: rgba(123, 95, 153, 0.14);
+      box-shadow: 0 10px 22px rgba(105, 160, 214, 0.18), inset 0 1px 0 rgba(255,255,255,0.55);
+    }
+
+    body.theme-day .theme-toggle::before {
+      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.65), transparent 58%);
+    }
+
+    body.theme-night .theme-toggle .icon-sun,
+    body.theme-day .theme-toggle .icon-moon {
+      opacity: 1;
+      transform: scale(1) rotate(0deg);
+    }
+
+    body.theme-switching .theme-toggle {
+      animation: themeTogglePulse .52s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    body.theme-switching.theme-day .theme-toggle .icon-moon,
+    body.theme-switching.theme-night .theme-toggle .icon-sun {
+      animation: themeIconReveal .52s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    @keyframes themeTogglePulse {
+      0% { transform: scale(1); }
+      45% { transform: scale(0.90); }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes themeIconReveal {
+      0% { opacity: 0; transform: scale(0.35) rotate(-110deg); }
+      55% { opacity: 1; transform: scale(1.12) rotate(12deg); }
+      100% { opacity: 1; transform: scale(1) rotate(0deg); }
+    }
+
+    body,
+    body::before,
+    body::after,
+    .header,
+    .header h1,
+    .header p,
+    .stars-container,
+    .ambient-glow,
+    .fireflies-layer,
+    .clouds-layer {
+      transition: background .55s ease, background-image .55s ease, color .35s ease, border-color .35s ease, box-shadow .45s ease, opacity .45s ease, filter .45s ease;
+    }
+
+    .clouds-layer {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1;
+      opacity: 0;
+      transition: opacity .55s ease;
+      overflow: hidden;
+    }
+
+    body.theme-day .clouds-layer {
+      opacity: 0.75;
+    }
+
+    body.theme-night .clouds-layer {
+      opacity: 0;
+    }
+
+    .cloud {
+      position: absolute;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.86);
+      filter: blur(0.5px);
+      box-shadow: 0 10px 22px rgba(196, 205, 255, 0.18);
+      animation: cloudDrift linear infinite;
+    }
+
+    .cloud::before,
+    .cloud::after {
+      content: '';
+      position: absolute;
+      background: inherit;
+      border-radius: 50%;
+    }
+
+    .cloud::before {
+      width: 44%;
+      height: 82%;
+      left: 12%;
+      bottom: 34%;
+    }
+
+    .cloud::after {
+      width: 34%;
+      height: 64%;
+      right: 14%;
+      bottom: 28%;
+    }
+
+    @keyframes cloudDrift {
+      from { transform: translateX(-18vw); }
+      to { transform: translateX(118vw); }
+    }
+
+    .stars-container,
+    .clouds-layer,
+    .ambient-glow,
+    .fireflies-layer,
+    .particles-layer {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+
+    .ambient-glow::before,
+    .ambient-glow::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(60px);
+      opacity: 0.24;
+    }
+
+    .ambient-glow::before {
+      width: 48vw;
+      height: 48vw;
+      min-width: 240px;
+      min-height: 240px;
+      top: -10%;
+      left: -12%;
+      background: rgba(255, 196, 0, 0.10);
+      animation: glowFloatLeft 10s ease-in-out infinite alternate;
+    }
+
+    .ambient-glow::after {
+      width: 42vw;
+      height: 42vw;
+      min-width: 210px;
+      min-height: 210px;
+      right: -10%;
+      bottom: -12%;
+      background: rgba(183, 89, 255, 0.08);
+      animation: glowFloatRight 12s ease-in-out infinite alternate;
+    }
+
+    .stars-container { z-index: 1; }
+    .clouds-layer { z-index: 1; }
+    .ambient-glow { z-index: 2; }
+    .fireflies-layer { z-index: 3; overflow: hidden; }
+    .particles-layer { z-index: 40; }
+
+    .star {
+      position: absolute;
+      will-change: transform, opacity;
+      background: white;
+      border-radius: 50%;
+      box-shadow: 0 0 8px rgba(255,255,255,0.38);
+      animation: twinkle linear infinite;
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.16; transform: scale(0.84); }
+      50% { opacity: 1; transform: scale(1.24); }
+    }
+
+    .scene {
+      position: relative;
+      z-index: 10;
+      width: min(100vw, 1120px);
+      max-width: 100vw;
+      min-height: 100dvh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding:
+        max(12px, env(safe-area-inset-top))
+        max(12px, env(safe-area-inset-right))
+        max(14px, env(safe-area-inset-bottom))
+        max(12px, env(safe-area-inset-left));
+    }
+
+    .header {
+      width: min(96vw, 820px);
+      text-align: center;
+      padding: clamp(1rem, 2.6vh, 1.6rem) clamp(1rem, 4vw, 2rem);
+      background: rgba(24, 14, 39, 0.18);
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 24px;
+      backdrop-filter: blur(16px) saturate(120%);
+      -webkit-backdrop-filter: blur(16px) saturate(120%);
+      box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+      position: relative;
+      z-index: 30;
+      opacity: 0;
+      animation: messageReveal 1.15s cubic-bezier(0.16, 1, 0.3, 1) 0.10s forwards;
+    }
+
+    .header h1 {
+      font-family: 'Dancing Script', cursive;
+      font-size: clamp(2.5rem, 9vw, 4.6rem);
+      line-height: 0.96;
+      color: var(--gold);
+      text-shadow: 0 0 14px rgba(255,215,0,0.40), 0 0 28px rgba(255,180,0,0.18);
+    }
+
+    .header p {
+      font-family: 'Caveat', cursive;
+      font-size: clamp(1.3rem, 4.7vw, 1.95rem);
+      line-height: 1.2;
+      color: var(--gold-soft);
+      margin-top: 0.38rem;
+      max-width: 23ch;
+      margin-inline: auto;
+      text-shadow: 0 0 5px rgba(255,255,255,0.10);
+    }
+
+    .bouquet-wrapper {
+      position: relative;
+      contain: layout paint;
+      width: min(100%, 860px);
+      height: clamp(560px, 76dvh, 860px);
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      z-index: 10;
+      opacity: 0;
+      animation: bouquetEntrance 1.45s cubic-bezier(0.16, 1, 0.3, 1) 0.32s forwards;
+      flex: 1;
+      margin-top: 18px;
+    }
+
+    .bouquet-wrapper::before {
+      content: "";
+      position: absolute;
+      width: min(82vw, 650px);
+      height: min(58vw, 460px);
+      left: 50%;
+      top: 38%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255, 204, 63, 0.16) 0%, rgba(255, 171, 35, 0.08) 36%, transparent 72%);
+      filter: blur(18px);
+      pointer-events: none;
+      animation: bouquetHalo 5.5s ease-in-out infinite alternate;
+    }
+
+    .bouquet-svg {
+      width: 92%;
+      height: 100%;
+      overflow: visible;
+      filter: drop-shadow(0 18px 34px rgba(0,0,0,0.24));
+      position: relative;
+      z-index: 1;
+    }
+
+    .stem {
+      stroke-dasharray: 820;
+      stroke-dashoffset: 820;
+      animation: growStem 1.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+
+    .leaf {
+      transform-origin: center;
+      transform-box: fill-box;
+      opacity: 0;
+      animation: leafSettle 0.72s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+
+    .paper-back path,
+    .paper-wrap path,
+    .paper-wrap rect {
+      opacity: 0;
+      vector-effect: non-scaling-stroke;
+      animation: paperReveal 0.82s cubic-bezier(0.2, 0.9, 0.3, 1) forwards !important;
+    }
+
+    .flower-head {
+      opacity: 0;
+      transform-origin: center;
+      transform-box: fill-box;
+      animation: flowerAppear 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    .flower-head .head-sway {
+      transform-origin: center;
+      transform-box: fill-box;
+      animation: headSway 4.6s ease-in-out infinite alternate;
+    }
+
+    .bouquet-motion {
+      transform-origin: 280px 720px;
+      animation: bouquetSway 7.2s ease-in-out infinite alternate 3.6s;
+    }
+
+    .paper-wrap,
+    .paper-back {
+      transform-origin: 280px 650px;
+      animation: wrapBreath 5.4s ease-in-out infinite alternate 3.4s;
+    }
+
+    .shadow-base {
+      transform-origin: center;
+      animation: shadowPulse 5s ease-in-out infinite alternate;
+    }
+
+    @keyframes growStem {
+      0% { stroke-dashoffset: 820; opacity: 0.25; }
+      18% { opacity: 1; }
+      100% { stroke-dashoffset: 0; opacity: 1; }
+    }
+
+    @keyframes leafSettle {
+      0% { opacity: 0; transform: scale(0.98); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes paperReveal {
+      0% { transform: translateY(16px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes flowerAppear {
+      0% { opacity: 0; transform: scale(0.26) rotate(-5deg); }
+      58% { opacity: 1; transform: scale(1.06) rotate(1deg); }
+      100% { opacity: 1; transform: scale(1) rotate(0deg); }
+    }
+
+    @keyframes headSway {
+      0% { transform: rotate(-1.4deg) translateY(0); }
+      100% { transform: rotate(1.4deg) translateY(-2px); }
+    }
+
+    @keyframes bouquetSway {
+      0% { transform: rotate(-0.7deg) translateY(0); }
+      100% { transform: rotate(0.7deg) translateY(-3px); }
+    }
+
+    @keyframes wrapBreath {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.006); }
+    }
+
+    @keyframes shadowPulse {
+      0% { opacity: 0.16; transform: scaleX(0.97); }
+      100% { opacity: 0.28; transform: scaleX(1.05); }
+    }
+
+    @keyframes messageReveal {
+      0% { opacity: 0; transform: translateY(-10px) scale(0.98); filter: blur(8px); }
+      70% { opacity: 1; transform: translateY(1px) scale(1.006); filter: blur(0); }
+      100% { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
+    }
+
+    @keyframes bouquetEntrance {
+      0% { opacity: 0; transform: translateY(72px) scale(0.95); filter: blur(6px); }
+      68% { opacity: 1; transform: translateY(34px) scale(1.01); filter: blur(0); }
+      100% { opacity: 1; transform: translateY(18px) scale(0.97); filter: blur(0); }
+    }
+
+    @keyframes bouquetFloat {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(5px); }
+    }
+
+    @keyframes bouquetHalo {
+      0% { opacity: 0.48; transform: translate(-50%, -50%) scale(0.94); }
+      100% { opacity: 0.9; transform: translate(-50%, -50%) scale(1.08); }
+    }
+
+    @keyframes auroraDrift {
+      0% { transform: translate3d(-2%, -1%, 0) rotate(-2deg) scale(1); }
+      100% { transform: translate3d(3%, 2%, 0) rotate(3deg) scale(1.08); }
+    }
+
+    @keyframes backgroundShimmer {
+      0% { opacity: 0.55; transform: translateX(-1%); }
+      100% { opacity: 0.9; transform: translateX(1%); }
+    }
+
+    @keyframes glowFloatLeft {
+      0% { transform: translate3d(-6px, 0, 0) scale(0.94); opacity: 0.24; }
+      100% { transform: translate3d(22px, 18px, 0) scale(1.08); opacity: 0.42; }
+    }
+
+    @keyframes glowFloatRight {
+      0% { transform: translate3d(8px, 10px, 0) scale(1); opacity: 0.18; }
+      100% { transform: translate3d(-20px, -18px, 0) scale(1.12); opacity: 0.38; }
+    }
+
+    @keyframes bokehFloat {
+      0% { transform: translate3d(0, 0, 0) scale(0.94); opacity: 0.12; }
+      100% { transform: translate3d(12px, -18px, 0) scale(1.1); opacity: 0.24; }
+    }
+
+    .firefly {
+      position: absolute;
+      will-change: transform, opacity;
+      width: var(--size);
+      height: var(--size);
+      left: var(--x);
+      top: var(--y);
+      border-radius: 50%;
+      background: rgba(255, 220, 118, 0.92);
+      box-shadow: 0 0 8px rgba(255, 214, 87, 0.68), 0 0 18px rgba(255, 178, 45, 0.28);
+      opacity: 0;
+      animation: fireflyFloat var(--duration) ease-in-out var(--delay) infinite;
+    }
+
+    @keyframes fireflyFloat {
+      0% { opacity: 0; transform: translate3d(0, 18px, 0) scale(0.65); }
+      16% { opacity: 0.8; }
+      48% { opacity: 0.45; transform: translate3d(var(--drift), -22px, 0) scale(1); }
+      72% { opacity: 0.85; }
+      100% { opacity: 0; transform: translate3d(calc(var(--drift) * -0.35), -54px, 0) scale(0.72); }
+    }
+
+    .particle {
+      position: absolute;
+      border-radius: 50%;
+      transform: translate(-50%, -50%) scale(0.5);
+      pointer-events: none;
+    }
+
+    .particle.night-particle {
+      width: 10px;
+      height: 10px;
+      background: radial-gradient(circle, rgba(255, 235, 165, 1) 0%, rgba(255, 200, 54, 0.9) 46%, rgba(255, 200, 54, 0) 100%);
+      animation: particleRise 1.4s ease-out forwards;
+    }
+
+    .particle.day-particle {
+      width: 16px;
+      height: 16px;
+      background: radial-gradient(circle, rgba(255,255,255,0.98) 0%, rgba(255,244,194,0.92) 38%, rgba(255,231,154,0.52) 62%, rgba(255,231,154,0) 100%);
+      filter: blur(0.2px);
+      animation: particleDayFloat 1.55s ease-out forwards;
+    }
+
+    @keyframes particleRise {
+      0% { opacity: 0; transform: translate(-50%, -50%) scale(0.3); }
+      16% { opacity: 1; }
+      100% { opacity: 0; transform: translate(calc(-50% + var(--dx, 0px)), -118px) scale(1.35); }
+    }
+
+    @keyframes particleDayFloat {
+      0% { opacity: 0; transform: translate(-50%, -50%) scale(0.22); }
+      18% { opacity: 0.95; }
+      100% { opacity: 0; transform: translate(calc(-50% + var(--dx, 0px)), calc(-50% - 88px)) scale(1.75); }
+    }
+
+    @media (min-width: 900px) {
+      .scene {
+        width: min(95vw, 1240px);
+        justify-content: flex-start;
+        gap: 28px;
+        padding-top: 22px;
+        padding-bottom: 18px;
+      }
+
+      .header {
+        width: min(70vw, 860px);
+        padding: 1rem 2rem 1.2rem;
+        border-radius: 28px;
+        box-shadow: 0 18px 54px rgba(0,0,0,0.28);
+        z-index: 35;
+      }
+
+      .header h1 {
+        font-size: clamp(2.8rem, 3.8vw, 4.6rem);
+      }
+
+      .header p {
+        max-width: 30ch;
+        font-size: clamp(1.28rem, 1.8vw, 1.8rem);
+      }
+
+      .bouquet-wrapper {
+        width: min(60vw, 700px);
+        height: min(56vh, 620px);
+        margin-top: 24px;
+      }
+
+      .bouquet-wrapper::before {
+        width: min(50vw, 560px);
+        height: min(38vw, 400px);
+        top: 36%;
+        filter: blur(18px);
+      }
+
+      .bouquet-svg {
+        width: 88%;
+      }
+    }
+
+    @media (max-width: 640px) {
+      html, body {
+        height: 100%;
+        overflow: hidden;
+      }
+      .scene {
+        width: 100vw;
+        justify-content: flex-start;
+        gap: 0;
+        padding-top: max(10px, env(safe-area-inset-top));
+        padding-left: max(8px, env(safe-area-inset-left));
+        padding-right: max(8px, env(safe-area-inset-right));
+      }
+      .header {
+        width: 100%;
+        border-radius: 20px;
+        flex: 0 0 auto;
+        z-index: 4;
+        margin-bottom: -30px;
+        padding-bottom: 1.55rem;
+      }
+      .bouquet-wrapper {
+        width: 100vw;
+        max-width: 100vw;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+        height: clamp(500px, 60dvh, 720px);
+        z-index: 12;
+      }
+      .bouquet-svg {
+        width: 94%;
+        max-width: none;
+      }
+    }
+
+    @media (max-width: 430px) {
+      .header {
+        padding: 0.85rem 0.8rem 1.4rem;
+        margin-bottom: -34px;
+      }
+      .bouquet-wrapper::before { width: 98vw; height: 74vw; top: 42%; }
+      .header h1 { font-size: clamp(2.35rem, 8.8vw, 3.8rem); }
+      .header p { font-size: clamp(1.18rem, 4.4vw, 1.55rem); max-width: 22ch; }
+      .bouquet-wrapper {
+        width: 100vw;
+        height: clamp(485px, 57dvh, 660px);
+      }
+      .bouquet-svg {
+        width: 98%;
+      }
+    }
+
+    body.is-paused *,
+    body.is-paused *::before,
+    body.is-paused *::after {
+      animation-play-state: paused !important;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <button class="theme-toggle" id="themeToggle" type="button" aria-label="Cambiar entre modo día y noche"><span class="icon-sun" aria-hidden="true">☀</span><span class="icon-moon" aria-hidden="true">☾</span></button>
+  <div class="stars-container" id="stars"></div>
+  <div class="clouds-layer" id="clouds"></div>
+  <div class="ambient-glow"><span class="bokeh" style="width:120px;height:120px;left:12%;top:22%;background:rgba(255,197,89,.36);"></span><span class="bokeh" style="width:92px;height:92px;right:14%;top:32%;background:rgba(187,145,255,.28);animation-duration:13s;"></span><span class="bokeh" style="width:138px;height:138px;left:24%;bottom:14%;background:rgba(255,154,78,.22);animation-duration:15s;"></span></div>
+  <div class="fireflies-layer" id="fireflies"></div>
+  <div class="particles-layer" id="particles"></div>
+
+  <main class="scene">
+    <div class="header">
+      <h1>Para ti, Brenda</h1>
+      <p>Un pequeño detalle para recordarte que tu amistad hace más bonitos los días.</p>
+    </div>
+
+    <div class="bouquet-wrapper">
+      <svg class="bouquet-svg" viewBox="0 0 560 760" preserveAspectRatio="xMidYMid meet">
+        <defs>
+          <linearGradient id="petalGrad1" x1="0%" y1="100%" x2="0%" y2="0%">
+            <stop offset="0%" stop-color="#ff8c00"/>
+            <stop offset="58%" stop-color="#ffcb1f"/>
+            <stop offset="100%" stop-color="#ffe980"/>
+          </linearGradient>
+          <linearGradient id="petalGrad2" x1="0%" y1="100%" x2="0%" y2="0%">
+            <stop offset="0%" stop-color="#db7600"/>
+            <stop offset="70%" stop-color="#f0b200"/>
+            <stop offset="100%" stop-color="#fff2ab"/>
+          </linearGradient>
+          <radialGradient id="centerGrad" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#2b1100"/>
+            <stop offset="70%" stop-color="#562907"/>
+            <stop offset="100%" stop-color="#281000"/>
+          </radialGradient>
+          <linearGradient id="stemGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#2b5a25"/>
+            <stop offset="50%" stop-color="#4f9544"/>
+            <stop offset="100%" stop-color="#1d3f18"/>
+          </linearGradient>
+          <linearGradient id="wrapGold" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#eccb6c"/>
+            <stop offset="50%" stop-color="#c79721"/>
+            <stop offset="100%" stop-color="#f3da8f"/>
+          </linearGradient>
+          <linearGradient id="paperGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#fcf3dd"/>
+            <stop offset="100%" stop-color="#dbc79e"/>
+          </linearGradient>
+          <linearGradient id="paperDarkGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#2a2225"/>
+            <stop offset="100%" stop-color="#120f11"/>
+          </linearGradient>
+          <linearGradient id="paperBrownGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#684b3a"/>
+            <stop offset="100%" stop-color="#35251f"/>
+          </linearGradient>
+          <linearGradient id="paperGoldGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#f0ce83"/>
+            <stop offset="55%" stop-color="#d4a84d"/>
+            <stop offset="100%" stop-color="#b7832c"/>
+          </linearGradient>
+
+          <g id="sunflowerHead">
+            <g fill="url(#petalGrad2)" stroke="#bb7008" stroke-width="0.9">
+              <path d="M0,0 C-10,-35 -18,-65 0,-85 C18,-65 10,-35 0,0" transform="rotate(0)"/>
+              <path d="M0,0 C-10,-35 -18,-65 0,-85 C18,-65 10,-35 0,0" transform="rotate(22.5)"/>
+              <path d="M0,0 C-10,-35 -18,-65 0,-85 C18,-65 10,-35 0,0" transform="rotate(45)"/>
+              <path d="M0,0 C-10,-35 -18,-65 0,-85 C18,-65 10,-35 0,0" transform="rotate(67.5)"/>
+              <path d="M0,0 C-10,-35 -18,-65 0,-85 C18,-65 10,-35 0,0" transform="rotate(90)"/>
+              <path d="M0,0 C-10,-35 -18,-65 0,-85 C18,-65 10,-35 0,0" transform="rotate(112.5)"/>
+              <path d="M0,0 C-10,-35 -18,-65 0,-85 C18,-65 10,-35 0,0" transform="rotate(135)"/>
+              <path d="M0,0 C-10,-35 -18,-65 0,-85 C18,-65 10,-35 0,0" transform="rotate(157.5)"/>
+              <path d="M0,0 C-10,-35 -18,-65 0,-85 C18,-65 10,-35 0,0" transform="rotate(180)"/>
+              <path d="M0,0 C-10,-35 -18,-65 0,-85 C18,-65 10,-35 0,0" transform="rotate(202.5)"/>
+              <path d="M0,0 C-10,-35 -18,-65 0,-85 C18,-65 10,-35 0,0" transform="rotate(225)"/>
+              <path d="M0,0 C-10,-35 -18,-65 0,-85 C18,-65 10,-35 0,0" transform="rotate(247.5)"/>
+              <path d="M0,0 C-10,-35 -18,-65 0,-85 C18,-65 10,-35 0,0" transform="rotate(270)"/>
+              <path d="M0,0 C-10,-35 -18,-65 0,-85 C18,-65 10,-35 0,0" transform="rotate(292.5)"/>
+              <path d="M0,0 C-10,-35 -18,-65 0,-85 C18,-65 10,-35 0,0" transform="rotate(315)"/>
+              <path d="M0,0 C-10,-35 -18,-65 0,-85 C18,-65 10,-35 0,0" transform="rotate(337.5)"/>
+            </g>
+            <g fill="url(#petalGrad1)" stroke="#d28a0d" stroke-width="0.7">
+              <path d="M0,0 C-8,-30 -14,-55 0,-74 C14,-55 8,-30 0,0" transform="rotate(11.25)"/>
+              <path d="M0,0 C-8,-30 -14,-55 0,-74 C14,-55 8,-30 0,0" transform="rotate(33.75)"/>
+              <path d="M0,0 C-8,-30 -14,-55 0,-74 C14,-55 8,-30 0,0" transform="rotate(56.25)"/>
+              <path d="M0,0 C-8,-30 -14,-55 0,-74 C14,-55 8,-30 0,0" transform="rotate(78.75)"/>
+              <path d="M0,0 C-8,-30 -14,-55 0,-74 C14,-55 8,-30 0,0" transform="rotate(101.25)"/>
+              <path d="M0,0 C-8,-30 -14,-55 0,-74 C14,-55 8,-30 0,0" transform="rotate(123.75)"/>
+              <path d="M0,0 C-8,-30 -14,-55 0,-74 C14,-55 8,-30 0,0" transform="rotate(146.25)"/>
+              <path d="M0,0 C-8,-30 -14,-55 0,-74 C14,-55 8,-30 0,0" transform="rotate(168.75)"/>
+              <path d="M0,0 C-8,-30 -14,-55 0,-74 C14,-55 8,-30 0,0" transform="rotate(191.25)"/>
+              <path d="M0,0 C-8,-30 -14,-55 0,-74 C14,-55 8,-30 0,0" transform="rotate(213.75)"/>
+              <path d="M0,0 C-8,-30 -14,-55 0,-74 C14,-55 8,-30 0,0" transform="rotate(236.25)"/>
+              <path d="M0,0 C-8,-30 -14,-55 0,-74 C14,-55 8,-30 0,0" transform="rotate(258.75)"/>
+              <path d="M0,0 C-8,-30 -14,-55 0,-74 C14,-55 8,-30 0,0" transform="rotate(281.25)"/>
+              <path d="M0,0 C-8,-30 -14,-55 0,-74 C14,-55 8,-30 0,0" transform="rotate(303.75)"/>
+              <path d="M0,0 C-8,-30 -14,-55 0,-74 C14,-55 8,-30 0,0" transform="rotate(326.25)"/>
+              <path d="M0,0 C-8,-30 -14,-55 0,-74 C14,-55 8,-30 0,0" transform="rotate(348.75)"/>
+            </g>
+            <circle cx="0" cy="0" r="28" fill="url(#centerGrad)" stroke="#180900" stroke-width="2"/>
+            <circle cx="0" cy="0" r="22" fill="none" stroke="#ffb325" stroke-width="1.1" stroke-dasharray="2 3" opacity="0.65"/>
+          </g>
+        </defs>
+
+        <ellipse class="shadow-base" cx="280" cy="735" rx="150" ry="20" fill="#000" opacity="0.18"/>
+
+        <g class="bouquet-motion">
+          <!-- Papel posterior inspirado en la foto: abanico de puntas envolviendo el ramo -->
+          <g transform="translate(0,-165)">
+            <g class="paper-back">
+              <path d="M34,520 L40,320 L168,350 L182,508 Z" fill="url(#paperDarkGrad)" stroke="url(#paperGoldGrad)" stroke-width="6" stroke-linejoin="round"/>
+              <path d="M92,474 L120,230 L222,324 L208,505 Z" fill="url(#paperDarkGrad)" stroke="url(#paperGoldGrad)" stroke-width="6" stroke-linejoin="round"/>
+              <path d="M162,432 L228,118 L294,308 L254,516 Z" fill="url(#paperDarkGrad)" stroke="url(#paperGoldGrad)" stroke-width="6" stroke-linejoin="round"/>
+              <path d="M234,402 L252,58 L360,70 L344,390 Z" fill="url(#paperDarkGrad)" stroke="url(#paperGoldGrad)" stroke-width="6" stroke-linejoin="round"/>
+              <path d="M398,432 L332,118 L266,308 L306,516 Z" fill="url(#paperDarkGrad)" stroke="url(#paperGoldGrad)" stroke-width="6" stroke-linejoin="round"/>
+              <path d="M468,474 L440,230 L338,324 L352,505 Z" fill="url(#paperDarkGrad)" stroke="url(#paperGoldGrad)" stroke-width="6" stroke-linejoin="round"/>
+              <path d="M526,520 L520,320 L392,350 L378,508 Z" fill="url(#paperDarkGrad)" stroke="url(#paperGoldGrad)" stroke-width="6" stroke-linejoin="round"/>
+            </g>
+          </g>
+
+          <!-- papel de fondo central: encima del background y debajo del ramo -->
+          <g class="leaf" style="animation-delay:2.44s; opacity:.96">
+            <path d="M214,430 C238,402 258,390 280,390 C302,390 322,402 346,430 C335,474 313,512 280,542 C247,512 225,474 214,430 Z" fill="url(#paperDarkGrad)" stroke="url(#paperGoldGrad)" stroke-width="3.6" opacity="0.96"/>
+          </g>
+
+          <!-- stems, bouquet arranged like a real hand-tied bunch -->
+          <path class="stem" style="animation-delay:0.00s" d="M280,700 Q280,385 280,122" stroke="url(#stemGrad)" stroke-width="13" fill="none" stroke-linecap="round"/>
+          <path class="stem" style="animation-delay:0.06s" d="M280,700 Q250,405 210,165" stroke="url(#stemGrad)" stroke-width="11" fill="none" stroke-linecap="round"/>
+          <path class="stem" style="animation-delay:0.12s" d="M280,700 Q310,405 350,165" stroke="url(#stemGrad)" stroke-width="11" fill="none" stroke-linecap="round"/>
+          <path class="stem" style="animation-delay:0.18s" d="M280,700 Q220,430 145,225" stroke="url(#stemGrad)" stroke-width="10" fill="none" stroke-linecap="round"/>
+          <path class="stem" style="animation-delay:0.24s" d="M280,700 Q340,430 415,225" stroke="url(#stemGrad)" stroke-width="10" fill="none" stroke-linecap="round"/>
+          <path class="stem" style="animation-delay:0.30s" d="M280,700 Q250,445 240,235" stroke="url(#stemGrad)" stroke-width="10" fill="none" stroke-linecap="round"/>
+          <path class="stem" style="animation-delay:0.36s" d="M280,700 Q310,445 320,235" stroke="url(#stemGrad)" stroke-width="10" fill="none" stroke-linecap="round"/>
+          <path class="stem" style="animation-delay:0.42s" d="M280,700 Q230,470 185,295" stroke="url(#stemGrad)" stroke-width="10" fill="none" stroke-linecap="round"/>
+          <path class="stem" style="animation-delay:0.48s" d="M280,700 Q330,470 375,295" stroke="url(#stemGrad)" stroke-width="10" fill="none" stroke-linecap="round"/>
+          <path class="stem" style="animation-delay:0.54s" d="M280,700 Q278,485 275,300" stroke="url(#stemGrad)" stroke-width="10" fill="none" stroke-linecap="round"/>
+          <path class="stem" style="animation-delay:0.60s" d="M280,700 Q245,560 225,375" stroke="url(#stemGrad)" stroke-width="9" fill="none" stroke-linecap="round"/>
+          <path class="stem" style="animation-delay:0.66s" d="M280,700 Q315,560 335,375" stroke="url(#stemGrad)" stroke-width="9" fill="none" stroke-linecap="round"/>
+          <path class="stem" style="animation-delay:0.72s" d="M280,700 Q280,575 280,405" stroke="url(#stemGrad)" stroke-width="8" fill="none" stroke-linecap="round"/>
+
+          <!-- leaves -->
+          <path class="leaf" style="animation-delay:1.00s" d="M268,548 C248,542 232,530 226,538 C236,554 252,560 268,556 Z" fill="#325f2c"/>
+          <path class="leaf" style="animation-delay:1.08s" d="M292,548 C312,542 328,530 334,538 C324,554 308,560 292,556 Z" fill="#264d21"/>
+          <path class="leaf" style="animation-delay:1.16s" d="M268,500 C196,480 150,422 132,455 C160,499 226,515 268,500 Z" fill="#3a7133"/>
+          <path class="leaf" style="animation-delay:1.24s" d="M292,500 C364,480 410,422 428,455 C400,499 334,515 292,500 Z" fill="#2f5e29"/>
+          <path class="leaf" style="animation-delay:1.32s" d="M240,425 C188,409 160,365 146,390 C168,423 214,438 240,425 Z" fill="#35682f"/>
+          <path class="leaf" style="animation-delay:1.40s" d="M320,425 C372,409 400,365 414,390 C392,423 346,438 320,425 Z" fill="#294f24"/>
+          <path class="leaf" style="animation-delay:1.48s" d="M266,596 C246,592 234,580 230,590 C238,606 252,612 266,608 Z" fill="#41793a"/>
+          <path class="leaf" style="animation-delay:1.56s" d="M294,596 C314,592 326,580 330,590 C322,606 308,612 294,608 Z" fill="#2a5225"/>
+          <path class="leaf" style="animation-delay:1.64s" d="M214,335 C176,326 156,298 146,316 C164,340 196,348 214,335 Z" fill="#376b31"/>
+          <path class="leaf" style="animation-delay:1.72s" d="M346,335 C384,326 404,298 414,316 C396,340 364,348 346,335 Z" fill="#2d5828"/>
+          <path class="leaf" style="animation-delay:1.80s" d="M270,355 C232,345 210,320 202,340 C220,367 247,375 270,355 Z" fill="#3a7133"/>
+          <path class="leaf" style="animation-delay:1.88s" d="M290,355 C328,345 350,320 358,340 C340,367 313,375 290,355 Z" fill="#2c5827"/>
+          <path class="leaf" style="animation-delay:1.96s" d="M250,458 C224,446 206,428 198,440 C210,460 231,469 252,463 Z" fill="#4a7f42"/>
+          <path class="leaf" style="animation-delay:2.04s" d="M310,458 C336,446 354,428 362,440 C350,460 329,469 308,463 Z" fill="#335f2f"/>
+          <path class="leaf" style="animation-delay:2.12s" d="M258,392 C230,382 213,365 206,377 C218,395 240,404 260,399 Z" fill="#4f8748"/>
+          <path class="leaf" style="animation-delay:2.20s" d="M302,392 C330,382 347,365 354,377 C342,395 320,404 300,399 Z" fill="#315b2c"/>
+          <path class="leaf" style="animation-delay:2.24s" d="M258,642 C242,635 230,624 228,632 C238,646 248,650 259,648 Z" fill="#4a7f42"/>
+          <path class="leaf" style="animation-delay:2.28s" d="M302,642 C318,635 330,624 332,632 C322,646 312,650 301,648 Z" fill="#335f2f"/>
+          <path class="leaf" style="animation-delay:2.32s" d="M266,676 C250,670 238,660 236,668 C246,681 257,686 268,683 Z" fill="#3f7338"/>
+          <path class="leaf" style="animation-delay:2.36s" d="M294,676 C310,670 322,660 324,668 C314,681 303,686 292,683 Z" fill="#2f5e29"/>
+
+          <!-- flowers, compact rounded bouquet -->
+          <g class="flower-head" style="animation-delay:1.82s"><g class="head-sway" style="animation-delay:.10s"><g transform="translate(280 122) scale(1.14) rotate(2)"><use href="#sunflowerHead"/></g></g></g>
+          <g class="flower-head" style="animation-delay:1.94s"><g class="head-sway" style="animation-delay:.18s"><g transform="translate(210 165) scale(0.99) rotate(-6)"><use href="#sunflowerHead"/></g></g></g>
+          <g class="flower-head" style="animation-delay:2.06s"><g class="head-sway" style="animation-delay:.26s"><g transform="translate(350 165) scale(0.99) rotate(6)"><use href="#sunflowerHead"/></g></g></g>
+          <g class="flower-head" style="animation-delay:2.18s"><g class="head-sway" style="animation-delay:.34s"><g transform="translate(145 225) scale(0.86) rotate(-9)"><use href="#sunflowerHead"/></g></g></g>
+          <g class="flower-head" style="animation-delay:2.30s"><g class="head-sway" style="animation-delay:.42s"><g transform="translate(415 225) scale(0.86) rotate(9)"><use href="#sunflowerHead"/></g></g></g>
+          <g class="flower-head" style="animation-delay:2.42s"><g class="head-sway" style="animation-delay:.50s"><g transform="translate(240 235) scale(0.93) rotate(-3)"><use href="#sunflowerHead"/></g></g></g>
+          <g class="flower-head" style="animation-delay:2.54s"><g class="head-sway" style="animation-delay:.58s"><g transform="translate(320 235) scale(0.93) rotate(3)"><use href="#sunflowerHead"/></g></g></g>
+          <g class="flower-head" style="animation-delay:2.66s"><g class="head-sway" style="animation-delay:.66s"><g transform="translate(185 295) scale(0.83) rotate(-7)"><use href="#sunflowerHead"/></g></g></g>
+          <g class="flower-head" style="animation-delay:2.78s"><g class="head-sway" style="animation-delay:.74s"><g transform="translate(375 295) scale(0.83) rotate(7)"><use href="#sunflowerHead"/></g></g></g>
+          <g class="flower-head" style="animation-delay:2.90s"><g class="head-sway" style="animation-delay:.82s"><g transform="translate(275 300) scale(0.88) rotate(-1)"><use href="#sunflowerHead"/></g></g></g>
+          <g class="flower-head" style="animation-delay:3.02s"><g class="head-sway" style="animation-delay:.90s"><g transform="translate(225 375) scale(0.80) rotate(-3)"><use href="#sunflowerHead"/></g></g></g>
+          <g class="flower-head" style="animation-delay:3.14s"><g class="head-sway" style="animation-delay:.98s"><g transform="translate(335 375) scale(0.80) rotate(3)"><use href="#sunflowerHead"/></g></g></g>
+          <g class="flower-head" style="animation-delay:3.26s"><g class="head-sway" style="animation-delay:1.06s"><g transform="translate(280 392) scale(0.84) rotate(0)"><use href="#sunflowerHead"/></g></g></g>
+
+          <!-- Papel frontal rediseñado: más bajo, envolvente y dejando ver mejor las flores -->
+          <g transform="translate(0,-118)">
+            <g class="paper-wrap">
+              <path class="leaf" style="animation-delay:1.95s" d="M68,474 C118,448 176,450 236,484 C214,516 199,542 194,572 C140,572 96,536 68,474 Z" fill="url(#paperDarkGrad)" stroke="url(#paperGoldGrad)" stroke-width="5" stroke-linejoin="round"/>
+              <path class="leaf" style="animation-delay:2.00s" d="M492,474 C442,448 384,450 324,484 C346,516 361,542 366,572 C420,572 464,536 492,474 Z" fill="url(#paperDarkGrad)" stroke="url(#paperGoldGrad)" stroke-width="5" stroke-linejoin="round"/>
+
+              <path class="leaf" style="animation-delay:2.05s" d="M90,522 C144,490 194,488 242,506 C236,568 222,620 202,664 C156,650 118,606 90,522 Z" fill="url(#paperDarkGrad)" stroke="url(#paperGoldGrad)" stroke-width="5" stroke-linejoin="round"/>
+              <path class="leaf" style="animation-delay:2.10s" d="M470,522 C416,490 366,488 318,506 C324,568 338,620 358,664 C404,650 442,606 470,522 Z" fill="url(#paperDarkGrad)" stroke="url(#paperGoldGrad)" stroke-width="5" stroke-linejoin="round"/>
+
+              <path class="leaf" style="animation-delay:2.16s" d="M152,616 C194,594 235,588 280,593 C325,588 366,594 408,616 C382,675 343,716 280,728 C217,716 178,675 152,616 Z" fill="url(#paperBrownGrad)" stroke="url(#paperGoldGrad)" stroke-width="5" stroke-linejoin="round"/>
+              <path class="leaf" style="animation-delay:2.22s" d="M198,650 C226,634 252,631 280,635 C308,631 334,634 362,650 C344,681 320,703 280,711 C240,703 216,681 198,650 Z" fill="url(#paperDarkGrad)" stroke="url(#paperGoldGrad)" stroke-width="4" stroke-linejoin="round"/>
+
+              <path class="leaf" style="animation-delay:2.28s" d="M247,634 C233,622 210,624 217,642 C226,654 247,650 267,642 C260,639 253,636 247,634 Z" fill="url(#paperDarkGrad)" stroke="url(#paperGoldGrad)" stroke-width="2.5"/>
+              <path class="leaf" style="animation-delay:2.28s" d="M313,634 C327,622 350,624 343,642 C334,654 313,650 293,642 C300,639 307,636 313,634 Z" fill="url(#paperDarkGrad)" stroke="url(#paperGoldGrad)" stroke-width="2.5"/>
+              <rect class="leaf" style="animation-delay:2.34s" x="269" y="636" width="22" height="16" rx="7" fill="url(#paperDarkGrad)" stroke="url(#paperGoldGrad)" stroke-width="2"/>
+              <path class="leaf" style="animation-delay:2.40s" d="M275,651 Q260,690 240,730 M285,651 Q300,690 320,730" stroke="#20181b" stroke-width="8" fill="none" stroke-linecap="round"/>
+              <path class="leaf" style="animation-delay:2.40s" d="M275,651 Q260,690 240,730 M285,651 Q300,690 320,730" stroke="url(#paperGoldGrad)" stroke-width="1.4" fill="none" stroke-linecap="round" opacity="0.85"/>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </div>
+  </main>
+
+  <script>
+    const starsContainer = document.getElementById('stars');
+    const cloudsLayer = document.getElementById('clouds');
+    const firefliesLayer = document.getElementById('fireflies');
+    const particlesLayer = document.getElementById('particles');
+    const themeToggle = document.getElementById('themeToggle');
+    const themeMeta = document.querySelector('meta[name="theme-color"]');
+    const isMobile = matchMedia('(max-width: 767px)').matches;
+
+    const setTheme = (theme, animated = false) => {
+      if (animated) {
+        document.body.classList.add('theme-switching');
+        window.clearTimeout(window.__themeSwitchTimer);
+        window.__themeSwitchTimer = window.setTimeout(() => {
+          document.body.classList.remove('theme-switching');
+        }, 560);
+      }
+      document.body.classList.remove('theme-day', 'theme-night');
+      document.body.classList.add(theme === 'day' ? 'theme-day' : 'theme-night');
+      if (themeMeta) themeMeta.setAttribute('content', theme === 'day' ? '#efe6fb' : '#130820');
+      if (themeToggle) themeToggle.setAttribute('aria-label', theme === 'day' ? 'Cambiar a modo noche' : 'Cambiar a modo día');
+      localStorage.setItem('girasolesTheme', theme);
+    };
+
+    const getAutoTheme = () => {
+      const hour = new Date().getHours();
+      return hour >= 7 && hour < 19 ? 'day' : 'night';
+    };
+
+    setTheme(localStorage.getItem('girasolesTheme') || getAutoTheme());
+
+    const appendBatch = (target, count, factory) => {
+      const fragment = document.createDocumentFragment();
+      for (let i = 0; i < count; i++) fragment.appendChild(factory(i));
+      target.appendChild(fragment);
+    };
+
+    appendBatch(starsContainer, isMobile ? 56 : 88, () => {
+      const star = document.createElement('span');
+      star.className = 'star';
+      const size = Math.random() * 2.6 + 1;
+      Object.assign(star.style, {
+        width: `${size}px`,
+        height: `${size}px`,
+        left: `${Math.random() * 100}%`,
+        top: `${Math.random() * 100}%`,
+        animationDuration: `${Math.random() * 3 + 2.4}s`,
+        animationDelay: `${Math.random() * 2}s`
+      });
+      return star;
+    });
+
+    appendBatch(cloudsLayer, isMobile ? 5 : 7, () => {
+      const cloud = document.createElement('span');
+      cloud.className = 'cloud';
+      const width = Math.round((isMobile ? 82 : 110) + Math.random() * (isMobile ? 56 : 84));
+      const height = Math.round(width * (0.34 + Math.random() * 0.08));
+      Object.assign(cloud.style, {
+        width: `${width}px`,
+        height: `${height}px`,
+        left: `${-20 - Math.random() * 25}vw`,
+        top: `${6 + Math.random() * 30}%`,
+        opacity: `${0.52 + Math.random() * 0.22}`,
+        animationDuration: `${28 + Math.random() * 24}s`,
+        animationDelay: `${-Math.random() * 18}s`
+      });
+      return cloud;
+    });
+
+    appendBatch(firefliesLayer, isMobile ? 8 : 12, () => {
+      const firefly = document.createElement('span');
+      firefly.className = 'firefly';
+      const size = (Math.random() * 2.8 + 1.6).toFixed(1);
+      firefly.style.cssText = `--size:${size}px;--x:${8 + Math.random() * 84}%;--y:${24 + Math.random() * 68}%;--duration:${6 + Math.random() * 6}s;--delay:${-Math.random() * 8}s;--drift:${(Math.random() - 0.5) * 70}px`;
+      return firefly;
+    });
+
+    document.addEventListener('pointerdown', (event) => {
+      if (!event.isPrimary) return;
+      const isDayMode = document.body.classList.contains('theme-day');
+      appendBatch(particlesLayer, 5, (i) => {
+        const particle = document.createElement('span');
+        particle.className = `particle ${isDayMode ? 'day-particle' : 'night-particle'}`;
+        particle.style.left = `${event.clientX + (Math.random() - 0.5) * 28}px`;
+        particle.style.top = `${event.clientY + (Math.random() - 0.5) * 18}px`;
+        particle.style.setProperty('--dx', `${(Math.random() - 0.5) * (isDayMode ? 42 : 28)}px`);
+        particle.style.animationDelay = `${i * 0.04}s`;
+        setTimeout(() => particle.remove(), isDayMode ? 1600 : 1450);
+        return particle;
+      });
+    }, { passive: true });
+
+    themeToggle?.addEventListener('click', () => {
+      const nextTheme = document.body.classList.contains('theme-day') ? 'night' : 'day';
+      setTheme(nextTheme, true);
+    });
+
+    document.addEventListener('visibilitychange', () => {
+      document.body.classList.toggle('is-paused', document.hidden);
+    });
+  </script>
+</body>
+</html>
